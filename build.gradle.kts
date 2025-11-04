@@ -2,13 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.noa"
     compileSdk {
-        version = release(35)
+        version = release(36)
     }
 
     defaultConfig {
@@ -44,6 +44,10 @@ android {
 }
 
 dependencies {
+    implementation("com.google.firebase:firebase-analytics")
+    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
+    implementation("com.google.firebase:firebase-database:22.0.1")
+    implementation("com.google.firebase:firebase-auth:24.0.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

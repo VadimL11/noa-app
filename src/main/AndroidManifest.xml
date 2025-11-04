@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.noa">
 
+    <!-- Дозвіл на інтернет (потрібен для Firebase Auth) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,18 +13,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Noa" >
+        android:theme="@style/Theme.Noa">
+
+        <!-- Екран привітання (Splash) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Noa" >
+            android:theme="@style/Theme.Noa">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Головний екран із Noa -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Noa" />
+
+        <!-- Екран підтвердження телефону -->
+        <activity
+            android:name=".PhoneAuthActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Noa" />
+
+        <!-- Профіль користувача -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Noa" />
+
     </application>
 
 </manifest>
