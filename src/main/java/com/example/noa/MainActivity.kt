@@ -38,7 +38,7 @@ fun MainScreen(onNoaClick: () -> Unit) {
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Image(
-                painter = painterResource(id = R.drawable.noa),
+                painter = painterResource(id = R.drawable.noa_icon),
                 contentDescription = "Noa",
                 modifier = Modifier
                     .size(240.dp)

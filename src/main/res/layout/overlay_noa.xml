@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/noa_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/noa_icon"
+        android:layout_gravity="center"
+        android:contentDescription="@string/noa_description"
+        android:alpha="0.9"
+        android:background="@android:color/transparent" />
+</FrameLayout>

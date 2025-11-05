@@ -48,7 +48,7 @@ fun SplashScreen(onTimeout: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.noa),
+            painter = painterResource(id = R.drawable.noa_icon),
             contentDescription = "Noa logo",
             modifier = Modifier
                 .size(220.dp)

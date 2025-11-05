@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Noa</string>
+    <string name="noa_description">Noa glowing companion</string>
 </resources>

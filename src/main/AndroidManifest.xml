@@ -4,6 +4,8 @@
 
     <!-- Дозвіл на інтернет (потрібен для Firebase Auth) -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
 
     <application
         android:allowBackup="true"
@@ -14,6 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Noa">
+
+        <service
+            android:name=".NoaOverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection|dataSync"
+            android:stopWithTask="false" />
 
         <!-- Екран привітання (Splash) -->
         <activity
@@ -41,7 +50,7 @@
         <!-- Профіль користувача -->
         <activity
             android:name=".HomeActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.Noa" />
 
     </application>
